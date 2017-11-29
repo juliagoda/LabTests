@@ -1,0 +1,15 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Terminal=false
+Type=Application
+InitialPreference=2
+Categories=Application;
+Exec=/usr/bin/labtests
+Path=/usr/share/labtests/src
+Name[en_US]=LabTests
+GenericName[en_US]=labtests
+Comment[en_US]=Application for checking of laboratory results in daily speech
+Name=LabTests
+StartupNotify=true 

@@ -1,0 +1,231 @@
+Test:
+    Blood-Morphology:
+        RBC:
+            M/μl:
+                Male:
+                    Age:
+                       Days:
+                            RangeMin:
+                                0:
+                                    RangeMax:
+                                        0:
+                                            Desc:
+                       Months:
+                       Years:
+            x 10(12)/L:
+                Male:
+                    Age:
+                       Days:
+                            RangeMin:
+                                0:
+                                    RangeMax:
+                                        0:
+                                            CellsMin:
+                                                3.90:
+                                                    CellsMax:
+                                                        5.50:
+                                                            Desc: Blood cell counts are normal
+                                                5.50:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        3.90:
+                                                            Desc: Blood cell counts are too low. 
+                                1:
+                                    RangeMax:
+                                        7:
+                                            CellsMin:
+                                                3.90:
+                                                    CellsMax:
+                                                        6.00:
+                                                            Desc: Blood cell counts are normal
+                                                6.00:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        3.90:
+                                                            Desc: Blood cell counts are too low. 
+                                8:
+                                    RangeMax:
+                                        14:
+                                            CellsMin:
+                                                3.60:
+                                                    CellsMax:
+                                                        6.00:
+                                                            Desc: Blood cell counts are normal
+                                                6.00:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        3.60:
+                                                            Desc: Blood cell counts are too low. 
+                                15:
+                                    RangeMax:
+                                        31:
+                                            CellsMin:
+                                                3.00:
+                                                    CellsMax:
+                                                        5.50:
+                                                            Desc: Blood cell counts are normal
+                                                5.50:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        3.00:
+                                                            Desc: Blood cell counts are too low. 
+                       Months:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        1:
+                                            CellsMin:
+                                                3.00:
+                                                    CellsMax:
+                                                        5.50:
+                                                            Desc: Blood cell counts are normal
+                                                5.50:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        3.00:
+                                                            Desc: Blood cell counts are too low. 
+                                2:
+                                    RangeMax:
+                                        5:
+                                            CellsMin:
+                                                3.10:
+                                                    CellsMax:
+                                                        4.50:
+                                                            Desc: Blood cell counts are normal
+                                                4.50:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        3.10:
+                                                            Desc: Blood cell counts are too low. 
+                                6:
+                                    RangeMax:
+                                        12:
+                                            CellsMin:
+                                                3.70:
+                                                    CellsMax:
+                                                        6.00:
+                                                            Desc: Blood cell counts are normal
+                                                6.00:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        3.70:
+                                                            Desc: Blood cell counts are too low.
+                       Years:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        1:
+                                            CellsMin:
+                                                3.70:
+                                                    CellsMax:
+                                                        6.00:
+                                                            Desc: Blood cell counts are normal
+                                                6.00:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        3.70:
+                                                            Desc: Blood cell counts are too low.
+                                2:
+                                    RangeMax:
+                                        2:
+                                            CellsMin:
+                                                4.10:
+                                                    CellsMax:
+                                                        5.10:
+                                                            Desc: Blood cell counts are normal
+                                                5.10:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        4.10:
+                                                            Desc: Blood cell counts are too low.
+                                3:
+                                    RangeMax:
+                                        5:
+                                            CellsMin:
+                                                4.10:
+                                                    CellsMax:
+                                                        5.30:
+                                                            Desc: Blood cell counts are normal
+                                                5.30:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        4.10:
+                                                            Desc: Blood cell counts are too low.
+                                6:
+                                    RangeMax:
+                                        11:
+                                            CellsMin:
+                                                4.20:
+                                                    CellsMax:
+                                                        5.10:
+                                                            Desc: Blood cell counts are normal
+                                                5.10:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        4.20:
+                                                            Desc: Blood cell counts are too low.
+                                12:
+                                    RangeMax:
+                                        15:
+                                            CellsMin:
+                                                4.40:
+                                                    CellsMax:
+                                                        5.50:
+                                                            Desc: Blood cell counts are normal
+                                                5.50:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        4.40:
+                                                            Desc: Blood cell counts are too low.
+                                16:
+                                    RangeMax:
+                                        120:
+                                            CellsMin:
+                                                4.32:
+                                                    CellsMax:
+                                                        5.72:
+                                                            Desc: Blood cell counts are normal
+                                                5.72:
+                                                    CellsMax:
+                                                        20:
+                                                            Desc: Blood cell counts are too high. 
+                                                0:
+                                                    CellsMax:
+                                                        4.32:
+                                                            Desc: Blood cell counts are too low.

@@ -29,11 +29,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def warnNotCheckedGender(self):
         if (self.dayAgeInput.value() == 0 and self.monthAgeInput.value() == 0 and self.yearAgeInput.value() == 0):
             QMessageBox.warning(self, "Age", "Age hasn't been set. You should set days, months or years in age part")
-            return
+            return True
             
         if (self.genderChoice.currentIndex() == -1):
             QMessageBox.warning(self, "Gender", "Combo Box with gender choice is empty or current text is empty")
-            return
+            return True
+
+        return False
         
     def getAge(self):
         if (self.dayAgeInput.value() != 0):
@@ -42,23 +44,36 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.__personDict['Age-Months'] = self.monthAgeInput.value()
         elif (self.yearAgeInput.value() != 0):
             self.__personDict['Age-Years'] = self.yearAgeInput.value()
+    
+            
+    def warnEmptyResultList(self, listt):
+        if (len(listt) == 0):
+            QMessageBox.warning(self, "Result", "You should set at least one test for at least one organic element. There can't be prepared answer for you, if there aren't put some datas.")
+            return True
+
+        return False
+    
         
     def checkResult(self):
         self.update()
-        self.warnNotCheckedGender()
-        bloodMorph(self)
-        bloodWCC(self)
-        bloodBioChem(self)
-        urineBioChem(self)
-        urineGeneral(self)
-        liverFuncTest(self)
-        self.__personDict['Gender'] = self.genderChoice.currentText() 
-        self.getAge()
+        if (not self.warnNotCheckedGender()):
+            bloodMorph(self)
+            bloodWCC(self)
+            bloodBioChem(self)
+            urineBioChem(self)
+            urineGeneral(self)
+            liverFuncTest(self)
+            self.__personDict['Gender'] = self.genderChoice.currentText()
+            self.getAge()
 
-        self.organ = Organ()
-        self.summary = Summary(self.organ.getAllDict(),self.__personDict)
-        self.answer = Answer(self.summary.getResultsDict())
-        self.answer.show()
+            self.organ = Organ()
+            self.summary = Summary(self.organ.getAllDict(),self.__personDict)
+            if (len(self.summary.getListOfLacks()) > 0):
+                for key, value in self.summary.getListOfLacks().items():
+                    QMessageBox.warning(self,"No information","There are not provided information in database for %s in %s part" % (str(value), str(key)))
+            if (not self.warnEmptyResultList(self.summary.getResultsDict())):
+                self.answer = Answer(self.summary.getResultsDict())
+                self.answer.show()
 
 
 if __name__ == '__main__':

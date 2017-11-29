@@ -15,22 +15,27 @@ class bloodMorph(Organ):
         self._setBuddies(mainWindow)
         listBoxes = self._createListOfAllBoxes(mainWindow)
         listLabels = self._createListOfAllLabels(mainWindow)
+        warnedDuplication = False
+        dontShowWarnAgain = False
         
         for bloodMeasure in listBoxes:
             if (self._foundMoreDescThanOne(bloodMeasure)):
-                self._showWarningAndAbort(mainWindow)
-                return
+                if (not dontShowWarnAgain):
+                    warnedDuplication = self._showWarningAndAbort(mainWindow)
+                
+                dontShowWarnAgain = True
         
-        for bloodAbbr in listLabels:
-            objNameBuddy = bloodAbbr.buddy().objectName()
-            for bloodMeasure in listBoxes:
-                if (bloodMeasure.objectName() == objNameBuddy):
-                    if (bloodMeasure.value() > 0):
-                        self._bloodMorphDict[bloodAbbr.text().replace('&','').strip()] = str(repr(bloodMeasure.value())).strip() + ' ' + bloodMeasure.suffix().strip()
+        if (not warnedDuplication):
+            for bloodAbbr in listLabels:
+                objNameBuddy = bloodAbbr.buddy().objectName()
+                for bloodMeasure in listBoxes:
+                    if (bloodMeasure.objectName() == objNameBuddy):
+                        if (bloodMeasure.value() > 0):
+                            self._bloodMorphDict[bloodAbbr.text().replace('&','').strip()] = str(repr(bloodMeasure.value())).strip() + ' ' + bloodMeasure.suffix().strip()
         
-        self._organDict['Blood-Morphology'] = self._bloodMorphDict
-        self.showAllBloodMorphDictElemKey()
-        self.showAllDictElemKey()
+            self._organDict['Blood-Morphology'] = self._bloodMorphDict
+            self.showAllBloodMorphDictElemKey()
+            self.showAllDictElemKey()
                 
     
     def getBloodMorphDict(self):
@@ -77,7 +82,7 @@ class bloodMorph(Organ):
     
     def _showWarningAndAbort(self,uiwindow):
         QMessageBox.warning(uiwindow,"Duplication","Various measurement type values for the same test cannot be set. Make a choice and choose only one measurement for your test in blood morphology part (for example only M/μl for RBC in blood morphology)")
-        return  
+        return True 
     
 
 
@@ -90,22 +95,29 @@ class bloodWCC(Organ):
         self._setBuddies(mainWindow)
         listBoxes = self._createListOfAllBoxes(mainWindow)
         listLabels = self._createListOfAllLabels(mainWindow)
+        warnedDuplication = False
+        dontShowWarnAgain = False
         
         for bloodMeasure in listBoxes:
             if (self._foundMoreDescThanOne(bloodMeasure)):
-                self._showWarningAndAbort(mainWindow)
-                return
-            
-        for bloodAbbr in listLabels:
-            objNameBuddy = bloodAbbr.buddy().objectName()
-            for bloodMeasure in listBoxes:
-                if (bloodMeasure.objectName() == objNameBuddy):
-                    if (bloodMeasure.value() > 0):
-                        self._bloodWCCDict[bloodAbbr.text().replace('&','').strip()] = str(repr(bloodMeasure.value())).strip() + ' ' + bloodMeasure.suffix().strip()
+                if (not dontShowWarnAgain):
+                    warnedDuplication = self._showWarningAndAbort(mainWindow)
+
+                dontShowWarnAgain = True
         
-        self._organDict['Blood-WCC'] = self._bloodWCCDict
-        self.showAllBloodWCCDictElemKey()
-        self.showAllDictElemKey()
+
+            
+        if (not warnedDuplication):    
+            for bloodAbbr in listLabels:
+                objNameBuddy = bloodAbbr.buddy().objectName()
+                for bloodMeasure in listBoxes:
+                    if (bloodMeasure.objectName() == objNameBuddy):
+                        if (bloodMeasure.value() > 0):
+                            self._bloodWCCDict[bloodAbbr.text().replace('&','').strip()] = str(repr(bloodMeasure.value())).strip() + ' ' + bloodMeasure.suffix().strip()
+        
+            self._organDict['Blood-WCC'] = self._bloodWCCDict
+            self.showAllBloodWCCDictElemKey()
+            self.showAllDictElemKey()
                 
     
     def getBloodWCCDict(self):
@@ -138,7 +150,7 @@ class bloodWCC(Organ):
     
     def _showWarningAndAbort(self,uiwindow):
         QMessageBox.warning(uiwindow,"Duplication","Various measurement type values for the same test cannot be set. Make a choice and choose only one measurement for your test in blood WCC part (for example only K/μl (G/l) for NEUT/NE in blood WCC)")
-        return 
+        return True
 
 
 class bloodBioChem(Organ):
@@ -150,22 +162,27 @@ class bloodBioChem(Organ):
         self._setBuddies(mainWindow)
         listBoxes = self._createListOfAllBoxes(mainWindow)
         listLabels = self._createListOfAllLabels(mainWindow)
+        warnedDuplication = False
+        dontShowWarnAgain = False
         
         for bloodMeasure in listBoxes:
             if (self._foundMoreDescThanOne(bloodMeasure)):
-                self._showWarningAndAbort(mainWindow)
-                return
-            
-        for bloodAbbr in listLabels:
-            objNameBuddy = bloodAbbr.buddy().objectName()
-            for bloodMeasure in listBoxes:
-                if (bloodMeasure.objectName() == objNameBuddy):
-                    if (bloodMeasure.value() > 0):
-                        self._bloodBioDict[bloodAbbr.text().replace('&','').strip()] = str(repr(bloodMeasure.value())).strip() + ' ' + bloodMeasure.suffix().strip()
+                if (not dontShowWarnAgain):
+                    warnedDuplication = self._showWarningAndAbort(mainWindow)
+                
+                dontShowWarnAgain = True
+
+        if (not warnedDuplication):    
+            for bloodAbbr in listLabels:
+                objNameBuddy = bloodAbbr.buddy().objectName()
+                for bloodMeasure in listBoxes:
+                    if (bloodMeasure.objectName() == objNameBuddy):
+                        if (bloodMeasure.value() > 0):
+                            self._bloodBioDict[bloodAbbr.text().replace('&','').strip()] = str(repr(bloodMeasure.value())).strip() + ' ' + bloodMeasure.suffix().strip()
         
-        self._organDict['Blood-Bio'] = self._bloodBioDict
-        self.showAllBloodBioDictElemKey()
-        self.showAllDictElemKey()
+            self._organDict['Blood-Bio'] = self._bloodBioDict
+            self.showAllBloodBioDictElemKey()
+            self.showAllDictElemKey()
                 
     
     def getBloodBioDict(self):
@@ -234,4 +251,4 @@ class bloodBioChem(Organ):
     
     def _showWarningAndAbort(self,uiwindow):
         QMessageBox.warning(uiwindow,"Duplication","Various measurement type values for the same test cannot be set. Make a choice and choose only one measurement for your test in blood biochemistry part (for example only mg/dl for BIL-T in blood biochemistry)")
-        return 
+        return True

@@ -3,11 +3,13 @@
 import yaml
 import os
 from decimal import Decimal
+from PyQt5.QtWidgets import QMessageBox
 
 
 class Summary:
     
     __resultsDict = {}
+    __listForLacks = {}
     
     def __init__(self, allYourTestsDict, personDict):
         
@@ -40,6 +42,12 @@ class Summary:
     
     def getResultsDict(self):
         return self.__resultsDict
+    
+    def getListOfLacks(self):
+        return self.__listForLacks
+    
+    def clearListOfLacks(self):
+        return self.__listForLacks.clear()
     
     def getResultsDictLen(self):
         print ("length of dictionary with descriptions: " + str(len(self.__resultsDict)))
@@ -107,6 +115,7 @@ class Summary:
         return elemString.split('-', 1)[-1]
         
     def __getContentForOldDict(self, oldDict, personDict, organ, file):
+        self.clearListOfLacks()
         if (self.__atLeastBloodDict(oldDict)):
             bloodYamlContent = self.__getOrganYamlFileContent(file)
             bloodTestItems = bloodYamlContent.get('Test')
@@ -121,27 +130,37 @@ class Summary:
                                prefixYear = self.__getPrefixOfYearKey(k) 
                                age = v
                             i = i + 1
-                        pathToRange = bloodTestItems[key1][key2][measurement][gender]['Age'][prefixYear]['RangeMin']
-                        for minRange in pathToRange.keys():        
-                            if (age >= minRange):
-                                for maxRange in pathToRange[minRange]['RangeMax']:
-                                    if (age <= maxRange):
-                                        pathToCells = pathToRange[minRange]['RangeMax'][maxRange]['CellsMin']
-                                        for minCellCount in pathToCells:
-                                            if (Decimal(self.__getValueOfMeasurement(value2)) >= minCellCount):
-                                              for maxCellCount in pathToCells[minCellCount]['CellsMax']:  
-                                                if (Decimal(self.__getValueOfMeasurement(value2)) <= maxCellCount):  
-                                                    print("minRange = " + str(minRange))
-                                                    print("maxRange = " + str(maxRange))
-                                                    print("cellsMin = " + str(minCellCount))
-                                                    print("cellsMax = " + str(maxCellCount))
-                                                    print("your age = " + str(age) + " " + str(prefixYear))
-                                                    print("your cells count = " + str(value2))
-                                                    for desc in pathToCells[minCellCount]['CellsMax'][maxCellCount].values():
-                                                        self.__resultsDict[str(key1)] = desc
-                                                        print("description = " + desc)
+                        if key1 in bloodTestItems:
+                            if key2 in bloodTestItems[key1]:
+                                if measurement in bloodTestItems[key1][key2]:
+                                    pathToRange = bloodTestItems[key1][key2][measurement][gender]['Age'][prefixYear]['RangeMin']
+                                    for minRange in pathToRange.keys():        
+                                        if (age >= minRange):
+                                            for maxRange in pathToRange[minRange]['RangeMax']:
+                                                if (age <= maxRange):
+                                                    pathToCells = pathToRange[minRange]['RangeMax'][maxRange]['CellsMin']
+                                                    for minCellCount in pathToCells:
+                                                        if (Decimal(self.__getValueOfMeasurement(value2)) >= minCellCount):
+                                                            for maxCellCount in pathToCells[minCellCount]['CellsMax']:  
+                                                                if (Decimal(self.__getValueOfMeasurement(value2)) <= maxCellCount):  
+                                                                    print("minRange = " + str(minRange))
+                                                                    print("maxRange = " + str(maxRange))
+                                                                    print("cellsMin = " + str(minCellCount))
+                                                                    print("cellsMax = " + str(maxCellCount))
+                                                                    print("your age = " + str(age) + " " + str(prefixYear))
+                                                                    print("your cells count = " + str(value2))
+                                                                    for desc in pathToCells[minCellCount]['CellsMax'][maxCellCount].values():
+                                                                        self.__resultsDict[str(key1)] = desc
+                                                                        print("description = " + desc)
+                                                                    
+                                                                else:
+                                                                    continue
                                                 else:
-                                                    continue
-                                    else:
-                                        continue  
+                                                    continue  
+                                else:
+                                    self.__listForLacks[organ] = str(measurement)
+                            else:
+                                self.__listForLacks[organ] = str(key2)
+                        else:
+                            self.__listForLacks[organ] = str(key1)
        

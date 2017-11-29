@@ -15,22 +15,27 @@ class urineBioChem(Organ):
         self._setBuddies(mainWindow)
         listBoxes = self._createListOfAllBoxes(mainWindow)
         listLabels = self._createListOfAllLabels(mainWindow)
+        warnedDuplication = False
+        dontShowWarnAgain = False
         
         for urineMeasure in listBoxes:
             if (self._foundMoreDescThanOne(urineMeasure)):
-                self._showWarningAndAbort(mainWindow)
-                return
-            
-        for urineAbbr in listLabels:
-            objNameBuddy = urineAbbr.buddy().objectName()
-            for urineMeasure in listBoxes:
-                if (urineMeasure.objectName() == objNameBuddy):
-                    if (urineMeasure.value() > 0):
-                        self._urineBioDict[urineAbbr.text().replace('&','').strip()] = str(repr(urineMeasure.value())).strip() + ' ' + urineMeasure.suffix().strip()
+                if (not dontShowWarnAgain):
+                    warnedDuplication = self._showWarningAndAbort(mainWindow)
+                
+                dontShowWarnAgain = True
+
+        if (not warnedDuplication):       
+            for urineAbbr in listLabels:
+                objNameBuddy = urineAbbr.buddy().objectName()
+                for urineMeasure in listBoxes:
+                    if (urineMeasure.objectName() == objNameBuddy):
+                        if (urineMeasure.value() > 0):
+                            self._urineBioDict[urineAbbr.text().replace('&','').strip()] = str(repr(urineMeasure.value())).strip() + ' ' + urineMeasure.suffix().strip()
         
-        self._organDict['Urine-Bio'] = self._urineBioDict
-        self.showAllBioDictUrineElemKey()
-        self.showAllDictElemKey()
+            self._organDict['Urine-Bio'] = self._urineBioDict
+            self.showAllBioDictUrineElemKey()
+            self.showAllDictElemKey()
                 
     
     def getUrineBioDict(self):
@@ -76,7 +81,7 @@ class urineBioChem(Organ):
     
     def _showWarningAndAbort(self,uiwindow):
         QMessageBox.warning(uiwindow,"Duplication","Various measurement type values for the same test cannot be set. Make a choice and choose only one measurement for your test in urine biochemistry part (for example only mmol/l for UREA in urine biochemistry)")
-        return 
+        return True
     
     
     
@@ -137,4 +142,4 @@ class urineGeneral(Organ):
     
     def _showWarningAndAbort(self,uiwindow):
         QMessageBox.warning(uiwindow,"Duplication","Various measurement type values for the same test cannot be set. Make a choice and choose only one measurement for your test in urine general part")
-        return  
+        return True 

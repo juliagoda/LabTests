@@ -15,22 +15,27 @@ class liverFuncTest(Organ):
         self._setBuddies(mainWindow)
         listBoxes = self._createListOfAllBoxes(mainWindow)
         listLabels = self._createListOfAllLabels(mainWindow)
+        warnedDuplication = False
+        dontShowWarnAgain = False
         
         for liverMeasure in listBoxes:
             if (self._foundMoreDescThanOne(liverMeasure)):
-                self._showWarningAndAbort(mainWindow)
-                return
+                if (not dontShowWarnAgain):
+                    warnedDuplication = self._showWarningAndAbort(mainWindow)
+                
+                dontShowWarnAgain = True
+
+        if (not warnedDuplication):
+            for liverAbbr in listLabels:
+                objNameBuddy = liverAbbr.buddy().objectName()
+                for liverMeasure in listBoxes:
+                    if (liverMeasure.objectName() == objNameBuddy):
+                        if (liverMeasure.value() > 0):
+                            self._liverFuncTestDict[liverAbbr.text().replace('&','').strip()] = str(repr(liverMeasure.value())).strip() + ' ' + liverMeasure.suffix().strip()
         
-        for liverAbbr in listLabels:
-            objNameBuddy = liverAbbr.buddy().objectName()
-            for liverMeasure in listBoxes:
-                if (liverMeasure.objectName() == objNameBuddy):
-                    if (liverMeasure.value() > 0):
-                        self._liverFuncTestDict[liverAbbr.text().replace('&','').strip()] = str(repr(liverMeasure.value())).strip() + ' ' + liverMeasure.suffix().strip()
-        
-        self._organDict['Liver-Test'] = self._liverFuncTestDict
-        self.showAllLiverTestDictElemKey()
-        self.showAllDictElemKey()
+            self._organDict['Liver-Test'] = self._liverFuncTestDict
+            self.showAllLiverTestDictElemKey()
+            self.showAllDictElemKey()
                 
     
     def getLiverTestDict(self):
@@ -56,4 +61,4 @@ class liverFuncTest(Organ):
     
     def _showWarningAndAbort(self,uiwindow):
         QMessageBox.warning(uiwindow,"Duplication","Various measurement type values for the same test cannot be set. Make a choice and choose only one measurement for your test in liver test function part (for example only mg% for BIL-T in liver function test)")
-        return
+        return True

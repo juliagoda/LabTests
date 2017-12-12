@@ -13,6 +13,9 @@ class Organ():
 
     def getAllDict(self):
         return self._organDict
+    
+    def clearAllDict(self):
+        self._organDict.clear()
 
     def getAllElemLen(self):
         return len(self._organDict)

@@ -40,6 +40,12 @@ class Summary:
         
         pass
     
+    def clearResultsDict(self):
+        self.__resultsDict.clear()
+        
+    def clearListForLacks(self):
+        self.__listForLacks.clear()
+    
     def getResultsDict(self):
         return self.__resultsDict
     
@@ -116,6 +122,7 @@ class Summary:
         
     def __getContentForOldDict(self, oldDict, personDict, organ, file):
         self.clearListOfLacks()
+        resNumb = 1
         if (self.__atLeastBloodDict(oldDict)):
             bloodYamlContent = self.__getOrganYamlFileContent(file)
             bloodTestItems = bloodYamlContent.get('Test')
@@ -150,8 +157,9 @@ class Summary:
                                                                     print("your age = " + str(age) + " " + str(prefixYear))
                                                                     print("your cells count = " + str(value2))
                                                                     for desc in pathToCells[minCellCount]['CellsMax'][maxCellCount].values():
-                                                                        self.__resultsDict[str(key1)] = desc
+                                                                        self.__resultsDict[str(key1) + str(resNumb)] = desc
                                                                         print("description = " + desc)
+                                                                        resNumb += 1
                                                                     
                                                                 else:
                                                                     continue

@@ -41,6 +41,9 @@ class bloodMorph(Organ):
     def getBloodMorphDict(self):
         return self._bloodMorphDict
     
+    def clearBloodMorphDict(self):
+        self._bloodMorphDict.clear()
+    
     def lenOfMorphDict(self):
         return len(self._bloodMorphDict)
     
@@ -123,6 +126,9 @@ class bloodWCC(Organ):
     def getBloodWCCDict(self):
         return self._bloodWCCDict
     
+    def clearBloodWCCDict(self):
+        self._bloodWCCDict.clear()
+    
     def lenOfWCCDict(self):
         return len(self._bloodWCCDict)
     
@@ -187,6 +193,9 @@ class bloodBioChem(Organ):
     
     def getBloodBioDict(self):
         return self._bloodBioDict
+    
+    def clearBloodBioDict(self):
+        self._bloodBioDict.clear()
     
     def lenOfBioDict(self):
         return len(self._bloodBioDict)

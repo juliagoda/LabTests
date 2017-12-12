@@ -57,9 +57,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def checkResult(self):
         self.update()
         if (not self.warnNotCheckedGender()):
-            bloodMorph(self)
-            bloodWCC(self)
-            bloodBioChem(self)
+            self.bloodM = bloodMorph(self)
+            self.bloodW = bloodWCC(self)
+            self.bloodB = bloodBioChem(self)
             urineBioChem(self)
             urineGeneral(self)
             liverFuncTest(self)
@@ -74,6 +74,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             if (not self.warnEmptyResultList(self.summary.getResultsDict())):
                 self.answer = Answer(self.summary.getResultsDict())
                 self.answer.show()
+                self.organ.clearAllDict()
+                self.summary.clearListForLacks()
+                self.summary.clearResultsDict()
+                self.__personDict.clear()
+                self.bloodB.clearBloodBioDict()
+                self.bloodW.clearBloodWCCDict()
+                self.bloodM.clearBloodMorphDict()
 
 
 if __name__ == '__main__':

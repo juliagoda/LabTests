@@ -2854,3 +2854,359 @@ Test:
                                                     CellsMax:
                                                         81.6:
                                                             Desc: Mean corpuscular volume is too low.
+        RDW:
+            '%':
+                Male:
+                    Age:
+                       Days:
+                            RangeMin:
+                                0:
+                                    RangeMax:
+                                        31:
+                                            CellsMin:
+                                                0:
+                                                    CellsMax:
+                                                        120.0:
+                                                            Desc: Red cell distribution width is not established at this age
+                       Months:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        12:
+                                            CellsMin:
+                                                0:
+                                                    CellsMax:
+                                                        120.0:
+                                                            Desc: Red cell distribution width is not established at this age
+                       Years:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        1:
+                                            CellsMin:
+                                                0:
+                                                    CellsMax:
+                                                        120.0:
+                                                            Desc: Red cell distribution width is not established at this age
+                                2:
+                                    RangeMax:
+                                        2:
+                                            CellsMin:
+                                                12:
+                                                    CellsMax:
+                                                        14.5:
+                                                            Desc: Red cell distribution width is normal
+                                                14.5:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Red cell distribution width is too high
+                                                0:
+                                                    CellsMax:
+                                                        12:
+                                                            Desc: Red cell distribution width is too low
+                                3:
+                                    RangeMax:
+                                        11:
+                                            CellsMin:
+                                                12:
+                                                    CellsMax:
+                                                        14:
+                                                            Desc: Red cell distribution width is normal
+                                                14:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Red cell distribution width is too high
+                                                0:
+                                                    CellsMax:
+                                                        12:
+                                                            Desc: Red cell distribution width is too low
+                                12:
+                                    RangeMax:
+                                        15:
+                                            CellsMin:
+                                                11.6:
+                                                    CellsMax:
+                                                        13.8:
+                                                            Desc: Red cell distribution width is normal
+                                                13.8:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Red cell distribution width is too high
+                                                0:
+                                                    CellsMax:
+                                                        11.6:
+                                                            Desc: Red cell distribution width is too low
+                                16:
+                                    RangeMax:
+                                        120:
+                                            CellsMin:
+                                                11.8:
+                                                    CellsMax:
+                                                        15.6:
+                                                            Desc: Red cell distribution width is normal
+                                                15.6:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Red cell distribution width is too high
+                                                0:
+                                                    CellsMax:
+                                                        11.8:
+                                                            Desc: Red cell distribution width is too low.
+                Female:
+                    Age:
+                       Days:
+                            RangeMin:
+                                0:
+                                    RangeMax:
+                                        31:
+                                            CellsMin:
+                                                0:
+                                                    CellsMax:
+                                                        120.0:
+                                                            Desc: Red cell distribution width is not established at this age
+                       Months:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        12:
+                                            CellsMin:
+                                                0:
+                                                    CellsMax:
+                                                        120.0:
+                                                            Desc: Red cell distribution width is not established at this age
+                       Years:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        1:
+                                            CellsMin:
+                                                0:
+                                                    CellsMax:
+                                                        120.0:
+                                                            Desc: Red cell distribution width is not established at this age
+                                2:
+                                    RangeMax:
+                                        2:
+                                            CellsMin:
+                                                12:
+                                                    CellsMax:
+                                                        14.5:
+                                                            Desc: Red cell distribution width is normal
+                                                14.5:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Red cell distribution width is too high
+                                                0:
+                                                    CellsMax:
+                                                        12:
+                                                            Desc: Red cell distribution width is too low.
+                                3:
+                                    RangeMax:
+                                        5:
+                                            CellsMin:
+                                                12:
+                                                    CellsMax:
+                                                        14:
+                                                            Desc: Red cell distribution width is normal
+                                                14:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Red cell distribution width is too high
+                                                0:
+                                                    CellsMax:
+                                                        12:
+                                                            Desc: Red cell distribution width is too low.
+                                6:
+                                    RangeMax:
+                                        11:
+                                            CellsMin:
+                                                11.6:
+                                                    CellsMax:
+                                                        13.4:
+                                                            Desc: Red cell distribution width is normal
+                                                13.4:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Red cell distribution width is too high
+                                                0:
+                                                    CellsMax:
+                                                        11.6:
+                                                            Desc: Red cell distribution width is too low.
+                                12:
+                                    RangeMax:
+                                        15:
+                                            CellsMin:
+                                                11.2:
+                                                    CellsMax:
+                                                        13.5:
+                                                            Desc: Red cell distribution width is normal
+                                                13.5:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Red cell distribution width is too high
+                                                0:
+                                                    CellsMax:
+                                                        11.2:
+                                                            Desc: Red cell distribution width is too low.
+                                16:
+                                    RangeMax:
+                                        120:
+                                            CellsMin:
+                                                11.9:
+                                                    CellsMax:
+                                                        15.5:
+                                                            Desc: Red cell distribution width is normal
+                                                15.5:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Red cell distribution width is too high
+                                                0:
+                                                    CellsMax:
+                                                        11.9:
+                                                            Desc: Red cell distribution width is too low.
+        PLT:
+            K/μl (G/l):
+                Male:
+                    Age:
+                       Days:
+                            RangeMin:
+                                0:
+                                    RangeMax:
+                                        31:
+                                            CellsMin:
+                                                150:
+                                                    CellsMax:
+                                                        350:
+                                                            Desc: Plateles count is normal
+                                                350:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Plateles count is too high
+                                                0:
+                                                    CellsMax:
+                                                        150:
+                                                            Desc: Plateles count is too low
+                       Months:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        5:
+                                            CellsMin:
+                                                150:
+                                                    CellsMax:
+                                                        350:
+                                                            Desc: Plateles count is normal
+                                                350:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Plateles count is too high
+                                                0:
+                                                    CellsMax:
+                                                        150:
+                                                            Desc: Plateles count is too low
+                                6:
+                                    RangeMax:
+                                        12:
+                                            CellsMin:
+                                                150:
+                                                    CellsMax:
+                                                        450:
+                                                            Desc: Plateles count is normal
+                                                450:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Plateles count is too high
+                                                0:
+                                                    CellsMax:
+                                                        150:
+                                                            Desc: Plateles count is too low
+                       Years:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        120:
+                                            CellsMin:
+                                                150:
+                                                    CellsMax:
+                                                        450:
+                                                            Desc: Plateles count is normal
+                                                450:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Plateles count is too high
+                                                0:
+                                                    CellsMax:
+                                                        150:
+                                                            Desc: Plateles count is too low
+                Female:
+                    Age:
+                       Days:
+                            RangeMin:
+                                0:
+                                    RangeMax:
+                                        31:
+                                            CellsMin:
+                                                150:
+                                                    CellsMax:
+                                                        350:
+                                                            Desc: Plateles count is normal
+                                                350:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Plateles count is too high
+                                                0:
+                                                    CellsMax:
+                                                        150:
+                                                            Desc: Plateles count is too low
+                       Months:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        5:
+                                            CellsMin:
+                                                150:
+                                                    CellsMax:
+                                                        350:
+                                                            Desc: Plateles count is normal
+                                                350:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Plateles count is too high
+                                                0:
+                                                    CellsMax:
+                                                        150:
+                                                            Desc: Plateles count is too low
+                                6:
+                                    RangeMax:
+                                        12:
+                                            CellsMin:
+                                                150:
+                                                    CellsMax:
+                                                        450:
+                                                            Desc: Plateles count is normal
+                                                450:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Plateles count is too high
+                                                0:
+                                                    CellsMax:
+                                                        150:
+                                                            Desc: Plateles count is too low
+                       Years:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        120:
+                                            CellsMin:
+                                                150:
+                                                    CellsMax:
+                                                        450:
+                                                            Desc: Plateles count is normal
+                                                450:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Plateles count is too high
+                                                0:
+                                                    CellsMax:
+                                                        150:
+                                                            Desc: Plateles count is too low

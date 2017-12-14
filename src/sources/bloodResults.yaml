@@ -3210,3 +3210,342 @@ Test:
                                                     CellsMax:
                                                         150:
                                                             Desc: Plateles count is too low
+        LYM:
+            K/μl:
+                Male:
+                    Age:
+                       Days:
+                            RangeMin:
+                                0:
+                                    RangeMax:
+                                        0:
+                                            CellsMin:
+                                                2.00:
+                                                    CellsMax:
+                                                        11.00:
+                                                            Desc: Lymphocytes count is normal
+                                                11.00:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        2.00:
+                                                            Desc: Lymphocytes count is too low
+                                1:
+                                    RangeMax:
+                                        14:
+                                            CellsMin:
+                                                2.00:
+                                                    CellsMax:
+                                                        17.00:
+                                                            Desc: Lymphocytes count is normal
+                                                17.00:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        2.00:
+                                                            Desc: Lymphocytes count is too low
+                                15:
+                                    RangeMax:
+                                        31:
+                                            CellsMin:
+                                                2.50:
+                                                    CellsMax:
+                                                        16.50:
+                                                            Desc: Lymphocytes count is normal
+                                                16.50:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        2.50:
+                                                            Desc: Lymphocytes count is too low
+                       Months:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        1:
+                                            CellsMin:
+                                                2.50:
+                                                    CellsMax:
+                                                        16.50:
+                                                            Desc: Lymphocytes count is normal
+                                                16.50:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        2.50:
+                                                            Desc: Lymphocytes count is too low
+                                2:
+                                    RangeMax:
+                                        5:
+                                            CellsMin:
+                                                4.00:
+                                                    CellsMax:
+                                                        13.50:
+                                                            Desc: Lymphocytes count is normal
+                                                13.50:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        4.00:
+                                                            Desc: Lymphocytes count is too low
+                                6:
+                                    RangeMax:
+                                        11:
+                                            CellsMin:
+                                                4.00:
+                                                    CellsMax:
+                                                        10.50:
+                                                            Desc: Lymphocytes count is normal
+                                                10.50:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        4.00:
+                                                            Desc: Lymphocytes count is too low
+                       Years:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        5:
+                                            CellsMin:
+                                                1.50:
+                                                    CellsMax:
+                                                        7.00:
+                                                            Desc: Lymphocytes count is normal
+                                                7.00:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        1.50:
+                                                            Desc: Lymphocytes count is too low
+                                6:
+                                    RangeMax:
+                                        11:
+                                            CellsMin:
+                                                1.50:
+                                                    CellsMax:
+                                                        6.50:
+                                                            Desc: Lymphocytes count is normal
+                                                6.50:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        1.50:
+                                                            Desc: Lymphocytes count is too low
+                                12:
+                                    RangeMax:
+                                        15:
+                                            CellsMin:
+                                                1.20:
+                                                    CellsMax:
+                                                        5.20:
+                                                            Desc: Lymphocytes count is normal
+                                                5.20:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        1.20:
+                                                            Desc: Lymphocytes count is too low
+                                16:
+                                    RangeMax:
+                                        120:
+                                            CellsMin:
+                                                0.90:
+                                                    CellsMax:
+                                                        2.90:
+                                                            Desc: Lymphocytes count is normal
+                                                2.90:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        0.90:
+                                                            Desc: Lymphocytes count is too low
+                Female:
+                    Age:
+                       Days:
+                            RangeMin:
+                                0:
+                                    RangeMax:
+                                        0:
+                                            CellsMin:
+                                                2.00:
+                                                    CellsMax:
+                                                        11.00:
+                                                            Desc: Lymphocytes count is normal
+                                                11.00:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        2.00:
+                                                            Desc: Lymphocytes count is too low
+                                1:
+                                    RangeMax:
+                                        14:
+                                            CellsMin:
+                                                2.00:
+                                                    CellsMax:
+                                                        17.00:
+                                                            Desc: Lymphocytes count is normal
+                                                17.00:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        2.00:
+                                                            Desc: Lymphocytes count is too low
+                                15:
+                                    RangeMax:
+                                        31:
+                                            CellsMin:
+                                                2.50:
+                                                    CellsMax:
+                                                        16.50:
+                                                            Desc: Lymphocytes count is normal
+                                                16.50:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        2.50:
+                                                            Desc: Lymphocytes count is too low
+                       Months:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        1:
+                                            CellsMin:
+                                                2.50:
+                                                    CellsMax:
+                                                        16.50:
+                                                            Desc: Lymphocytes count is normal
+                                                16.50:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        2.50:
+                                                            Desc: Lymphocytes count is too low
+                                2:
+                                    RangeMax:
+                                        5:
+                                            CellsMin:
+                                                4.00:
+                                                    CellsMax:
+                                                        13.50:
+                                                            Desc: Lymphocytes count is normal
+                                                13.50:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        4.00:
+                                                            Desc: Lymphocytes count is too low
+                                6:
+                                    RangeMax:
+                                        11:
+                                            CellsMin:
+                                                4.00:
+                                                    CellsMax:
+                                                        10.50:
+                                                            Desc: Lymphocytes count is normal
+                                                10.50:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        4.00:
+                                                            Desc: Lymphocytes count is too low
+                       Years:
+                            RangeMin:
+                                1:
+                                    RangeMax:
+                                        5:
+                                            CellsMin:
+                                                1.50:
+                                                    CellsMax:
+                                                        7.00:
+                                                            Desc: Lymphocytes count is normal
+                                                7.00:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        1.50:
+                                                            Desc: Lymphocytes count is too low
+                                6:
+                                    RangeMax:
+                                        11:
+                                            CellsMin:
+                                                1.50:
+                                                    CellsMax:
+                                                        6.50:
+                                                            Desc: Lymphocytes count is normal
+                                                6.50:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        1.50:
+                                                            Desc: Lymphocytes count is too low
+                                12:
+                                    RangeMax:
+                                        15:
+                                            CellsMin:
+                                                1.20:
+                                                    CellsMax:
+                                                        5.20:
+                                                            Desc: Lymphocytes count is normal
+                                                5.20:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        1.20:
+                                                            Desc: Lymphocytes count is too low
+                                16:
+                                    RangeMax:
+                                        120:
+                                            CellsMin:
+                                                0.90:
+                                                    CellsMax:
+                                                        2.90:
+                                                            Desc: Lymphocytes count is normal
+                                                2.90:
+                                                    CellsMax:
+                                                        10000:
+                                                            Desc: Lymphocytes count is too high
+                                                0:
+                                                    CellsMax:
+                                                        0.90:
+                                                            Desc: Lymphocytes count is too low
+

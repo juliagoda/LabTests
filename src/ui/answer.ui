@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>693</width>
-    <height>328</height>
+    <width>632</width>
+    <height>426</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,24 +17,30 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QToolBox" name="toolBox">
+      <widget class="QToolBox" name="textEditThyroid">
        <property name="cursor">
         <cursorShape>OpenHandCursor</cursorShape>
        </property>
-       <property name="currentIndex">
-        <number>2</number>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
        </property>
-       <widget class="QWidget" name="bloodPage">
+       <property name="toolTip">
+        <string>Click on the tab of your choice to expand and show the results</string>
+       </property>
+       <property name="currentIndex">
+        <number>5</number>
+       </property>
+       <widget class="QWidget" name="bloodResultsPage">
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>679</width>
-          <height>170</height>
+          <width>618</width>
+          <height>172</height>
          </rect>
         </property>
         <attribute name="label">
-         <string>blood</string>
+         <string>Complete Blood Count</string>
         </attribute>
         <attribute name="toolTip">
          <string>Click on this page, to check informations about your blood tests result</string>
@@ -62,17 +68,17 @@ p, li { white-space: pre-wrap; }
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="urinePage">
+       <widget class="QWidget" name="renalResultsPage">
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>679</width>
-          <height>170</height>
+          <width>618</width>
+          <height>172</height>
          </rect>
         </property>
         <attribute name="label">
-         <string>urine</string>
+         <string>Renal Panel</string>
         </attribute>
         <attribute name="toolTip">
          <string>Click on this page, to check informations about your urine tests result</string>
@@ -97,17 +103,17 @@ p, li { white-space: pre-wrap; }
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="liverPage">
+       <widget class="QWidget" name="liverResultsPage">
         <property name="geometry">
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>679</width>
-          <height>170</height>
+          <width>618</width>
+          <height>172</height>
          </rect>
         </property>
         <attribute name="label">
-         <string>liver</string>
+         <string>Liver Panel</string>
         </attribute>
         <attribute name="toolTip">
          <string>Click on this page, to check informations about your liver tests result</string>
@@ -129,6 +135,36 @@ p, li { white-space: pre-wrap; }
             <set>Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
            </property>
           </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="thyroidResultsPage">
+        <attribute name="label">
+         <string>Thyroid Panel</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QTextEdit" name="textEdit"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="electrolyteResultsPage">
+        <attribute name="label">
+         <string>Electrolyte Panel</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item>
+          <widget class="QTextEdit" name="textEditElectrolyte"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="lipidResultsPage">
+        <attribute name="label">
+         <string>Lipid Panel</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item>
+          <widget class="QTextEdit" name="textEditLipid"/>
          </item>
         </layout>
        </widget>

@@ -87,7 +87,7 @@
                    <enum>QLayout::SetFixedSize</enum>
                   </property>
                   <item row="4" column="0">
-                   <widget class="QLabel" name="rctLabel">
+                   <widget class="QLabel" name="rbcLabel">
                     <property name="toolTip">
                      <string>Red Blood Cells</string>
                     </property>
@@ -1378,8 +1378,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>599</width>
-                 <height>280</height>
+                 <width>570</width>
+                 <height>276</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1933,8 +1933,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>599</width>
-                 <height>280</height>
+                 <width>570</width>
+                 <height>276</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -2488,8 +2488,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>599</width>
-                 <height>280</height>
+                 <width>570</width>
+                 <height>276</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -3291,8 +3291,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>599</width>
-                 <height>280</height>
+                 <width>570</width>
+                 <height>276</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -4342,8 +4342,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>599</width>
-                 <height>280</height>
+                 <width>570</width>
+                 <height>276</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -5454,6 +5454,9 @@
             </property>
             <property name="toolTip">
              <string>Choose your age. Don't forget to choose &quot;days&quot;, &quot;months&quot; or &quot;years&quot;</string>
+            </property>
+            <property name="maximum">
+             <number>54000</number>
             </property>
            </widget>
           </item>

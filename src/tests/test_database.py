@@ -28,12 +28,10 @@ class TestDB(unittest.TestCase):
     __engine = None
     __connection = None
     
-    def __init__(self, *args, **kwargs):
-        super(TestDB, self).__init__(*args, **kwargs)
-        self.__engine = sqlalchemy.create_engine("SOME_ADDRESS") # of course it's not real yet
-        self.__connection = self.__engine.connect()
-        self.assertFalse(self.__connection.invalidated)
-        self.assertFalse(self.__connection.closed)
+    @classmethod
+    def setUpClass(cls):
+        cls.__engine = sqlalchemy.create_engine("SOME_ADDRESS", pool_recycle=280) # of course it's not real yet
+        cls.__connection = cls.__engine.connect()
 
 
     def test_hasTableLabs(self):
@@ -42,14 +40,19 @@ class TestDB(unittest.TestCase):
     def test_hasTableDesc(self):
         self.assertTrue(self.__engine.has_table("targetdesc"))
         
+     
+    # should not be allowed - it's only read user
+    # def test_dropTable(self):
+    #    self.__connection.execute("DROP TABLE IF EXISTS `targetdesc`")
+        
     
     def test_containsAllNeededTests(self):
         
         statement = self.__connection.execute("SELECT * FROM `labtests` WHERE `targetfullname` NOT IN('White Blood Cells','Hemoglobin','Platelets', 'Hematocrit', 'Sodium', 'Potassium', 'Calcium', 'Chloride', 'Phosphate', 'Magnesium', 'Blood Urea Nitrogen', 'Creatinine', 'Glucose', 'Glycohemoglobin', 'Thyroxine', 'Triiodothyronine', 'Thyroid', 'Bicarbonate', 'Arterial carbon dioxide', 'Albumin', 'Prealbumin', 'Bilirubin', 'Ammonia', 'High-Density Lipoprotein', 'Low-Density Lipoprotein', 'Triglycerides', 'Total Cholesterol')").fetchall()
-        
+
         self.assertFalse(statement)
-        
-        
+    
+ 
     # check if in table targetdesc the same column has some different value (comparision to labtests)
     # It's ok when everything is equal (because of reference to relational table)
     def test_containNotEqualTargets(self):
@@ -84,7 +87,7 @@ class TestDB(unittest.TestCase):
         if statement:
             for row_number, row in enumerate(statement):
                 print("Duplicated row for ", row["targetfullname"]) 
-                    
+                 
         self.assertFalse(statement)
         
             
@@ -98,12 +101,13 @@ class TestDB(unittest.TestCase):
         
         # if table contains not proper abbreviations for laboratory tests 
     def test_containsNotProperAbbr(self):
-        
+
         statement = self.__connection.execute("SELECT * FROM `targetdesc` WHERE `targetshortname` NOT IN('A1A', 'A1c', 'AB', 'ABG', 'ABRH', 'ABT', 'ACA', 'ACE', 'ACID PHOS', 'ACP', 'ACT', 'ACTH', 'ADA', 'AFB', 'AFP', 'AG', 'ALA', 'Alb', 'Alk Phos', 'ALP', 'ANA', 'Anti-HBc', 'Anti-HBe', 'Anti-HBs', 'Anti-HCV', 'APT', 'aPTT', 'ASN', 'ASO', 'ASP', 'AT III', 'B12', 'BMP', 'BNP', 'BUN', 'C1', 'C1Q', 'C2', 'C3', 'C4', 'Ca', 'CBC', 'CBCD', 'CEA', 'CH50', 'CK', 'Cl ', 'CMB', 'CMP', 'CMV', 'CMV Ag', 'CO', 'CO2', 'COHB', 'CONABO', 'CPK', 'Cr', 'CRCL', 'CrCl', 'CRD', 'CREAT', 'CRP', 'Cu', 'D Bil ', 'DAT', 'DCAS', 'DHEA', 'DHEAS', 'DIFM', 'Dig', 'EOS', 'EPO', 'ERA', 'ESR', 'ETOH', 'FBS', 'Fe', 'FEP', 'FFN', 'FFQ', 'Fol', 'FSH/LH', 'FT3', 'FT4', 'G2PP', 'G-6-PD', 'Gamma GT', 'GCT', 'GDS', 'GGT', 'GH', 'Glu', 'H&H', 'H/H', 'Hapto', 'HbA1c', 'HBeAb', 'HBeAg', 'HBsAb', 'HBsAg', 'hCG', 'hCG (urine)', 'HCT', 'HDL', 'HFP', 'HGB', 'HgbA1c', 'HGH', 'HIAA', 'HIV', 'HPV', 'HSV', 'iCa', 'IFE', 'IgA', 'IgE', 'IGF', 'IgG', 'IgM', 'INR', 'Jo-1', 'KB', 'K', 'Lact(o)', 'LD', 'LDH', 'LFT', 'LH', 'Li+', 'Li', 'MetHb', 'MetHgb', 'Mg', 'Mag', 'MIC', 'MMA', 'Mn', 'Mono', 'NA', 'NEOTY', 'NEOXM', 'NH3', 'NTR', 'PAP', 'Pb', 'PBG', 'PCP', 'PEP', 'PHOS', 'PKU', 'PLT', 'PLT Ct', 'PO4', 'PRL', 'PRU', 'PSA', 'PT', 'PTH', 'PTT', 'QIG', 'RBC', 'RET', 'RF', 'RFP', 'RhIG (Eval)', 'RPR', 'RSV', 'Scl-70', 'SHBG', 'SIFE', 'Siro', 'SPEP', 'SSA', 'SSB', 'SSDNA', 'TBIL/SBR', 'T3', 'T4', 'Tacro', 'TBG', 'TGL', 'Theo', 'TIBC', 'TP', 'TREP', 'Trep Ab', 'TRH', 'Trig', 'TRXN', 'TSH', 'TSI', 'TT', 'TYSC', 'UIFE', 'UPE', 'UPEP', 'Ur Prot Elect', 'VCA', 'VDRL', 'Vit A', 'Vit B1', 'Vit B12', 'Vit B2', 'Vit B6', 'Vit C', 'Vit D', 'VLDL', 'VMA', 'VZG', 'WBC', 'Xa', 'XM', 'Zn', 'ZPP', 'Hb', 'Hgb', 'PaCO2', 'HCO3', 'PA / PAB / PALB', 'LDL', 'TC', 'TG')").fetchall()
         
         self.assertFalse(statement)
         
         
-    def test_DBclose(self):
-        self.__connection.close()
-        self.assertTrue(self.__connection.closed)
+    @classmethod
+    def tearDownClass(cls):
+        if not cls.__connection.closed:
+            cls.__connection.close()

@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 
 import sys
-from mainwindow_ui import Ui_MainWindow
-from PyQt5.QtWidgets import QComboBox, QSpinBox, QMainWindow, QApplication, QMessageBox
-from PyQt5.QtGui import *
-from PyQt5.QtCore import *
+from ui.mainwindow_ui import Ui_MainWindow
+from PyQt5.QtWidgets import QMainWindow, QApplication
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):

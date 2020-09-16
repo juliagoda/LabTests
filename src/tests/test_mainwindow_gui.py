@@ -22,25 +22,25 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import sys
 
-sys.path.append("../ui")
+sys.path.append("../ui") # to see modules in parent's directory
 
 import unittest
 from mainwindow_ui import Ui_MainWindow
 from PyQt5.QtWidgets import QMainWindow, QApplication
 
 
-app = QApplication(sys.argv)
+app = QApplication(sys.argv) # without it we cannot test anything
 
 
 class MainWindowTest(unittest.TestCase):
     
-    mainwindow = None    
-    ui = None
-        
+    mainwindow = None  # hold QMainWindow in variable  
+    ui = None   # hold GUI in variable
+    
     def setUp(self):
-        self.mainwindow = QMainWindow()
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(self.mainwindow)        
+        self.mainwindow = QMainWindow() # create empty QMainWindow
+        self.ui = Ui_MainWindow() # we want to test GUI - only
+        self.ui.setupUi(self.mainwindow) # set GUI for freshly created QMainWindow
         
     # Check tab names of QTabWidget 
     def test_checkTabNames(self):
@@ -294,4 +294,32 @@ class MainWindowTest(unittest.TestCase):
         self.assertTrue(self.ui.actionFAQ.isEnabled())
         self.assertTrue(self.ui.actionFAQ.isIconVisibleInMenu())
         self.assertTrue(self.ui.actionFAQ.isShortcutVisibleInContextMenu())
+        
+        
+    def test_labelsToolTips(self):
+        self.assertEqual(self.ui.wbcLabel.toolTip(), "White Blood Cells")
+        self.assertEqual(self.ui.pltLabel.toolTip(), "Platelets")
+        self.assertEqual(self.ui.hgbLabel.toolTip(), "Hgb/Hb - Hemoglobin")
+        self.assertEqual(self.ui.hctLabel.toolTip(), "Hematocrit")
+        self.assertEqual(self.ui.rbcLabel.toolTip(), "Red Blood Cells")
+        
+        self.assertEqual(self.ui.bunLabel.toolTip(), "Blood Urea Nitrogen")
+        self.assertEqual(self.ui.crLabel.toolTip(), "Cr / CREAT - Creatinine")
+    
+        self.assertEqual(self.ui.albLabel.toolTip(), "Albumin")
+        self.assertEqual(self.ui.tbilLabel.toolTip(), "Total Bilirubin / Serum Bilirubin")
+     
+        self.assertEqual(self.ui.tshLabel.toolTip(), "Thyroid")
+        self.assertEqual(self.ui.t3Label.toolTip(), "Triiodothyronine")
+        self.assertEqual(self.ui.t4Label.toolTip(), "Thyroxine")
+     
+        self.assertEqual(self.ui.hco3Label.toolTip(), "Bicarbonate")
+        self.assertEqual(self.ui.clLabel.toolTip(), "Chloride")
+        self.assertEqual(self.ui.kLabel.toolTip(), "Potassium")
+        self.assertEqual(self.ui.naLabel.toolTip(), "Sodium")
+    
+        self.assertEqual(self.ui.tcLabel.toolTip(), "Total Cholesterol")
+        self.assertEqual(self.ui.tgLabel.toolTip(), "Triglycerides")
+        self.assertEqual(self.ui.hdlLabel.toolTip(), "High-Density Lipoprotein")
+        self.assertEqual(self.ui.ldlLabel.toolTip(), "Low-Density Lipoprotein")
         

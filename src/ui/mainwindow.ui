@@ -64,6 +64,9 @@
               <property name="margin">
                <number>5</number>
               </property>
+              <property name="buddy">
+               <cstring>scrollArea</cstring>
+              </property>
              </widget>
             </item>
             <item>
@@ -97,6 +100,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>rbcAmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                   <item row="3" column="0">
@@ -109,6 +115,9 @@
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="buddy">
+                     <cstring>hctAmountSpinBox</cstring>
                     </property>
                    </widget>
                   </item>
@@ -351,6 +360,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>wbcAmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                   <item row="2" column="0">
@@ -364,6 +376,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>hgbAmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                   <item row="1" column="0">
@@ -376,6 +391,9 @@
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="buddy">
+                     <cstring>pltAmountSpinBox</cstring>
                     </property>
                    </widget>
                   </item>
@@ -1366,6 +1384,9 @@
               <property name="margin">
                <number>5</number>
               </property>
+              <property name="buddy">
+               <cstring>scrollArea_2</cstring>
+              </property>
              </widget>
             </item>
             <item>
@@ -1378,8 +1399,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>221</width>
-                 <height>84</height>
+                 <width>570</width>
+                 <height>276</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1409,6 +1430,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>bunAmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                   <item row="1" column="0">
@@ -1421,6 +1445,9 @@
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="buddy">
+                     <cstring>crAmountSpinBox</cstring>
                     </property>
                    </widget>
                   </item>
@@ -1921,6 +1948,9 @@
               <property name="margin">
                <number>5</number>
               </property>
+              <property name="buddy">
+               <cstring>scrollArea_3</cstring>
+              </property>
              </widget>
             </item>
             <item>
@@ -1933,8 +1963,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>249</width>
-                 <height>84</height>
+                 <width>570</width>
+                 <height>276</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -2189,6 +2219,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>tbilAmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                   <item row="0" column="2">
@@ -2427,6 +2460,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>albAmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                   <item row="0" column="1">
@@ -2476,6 +2512,9 @@
               <property name="margin">
                <number>5</number>
               </property>
+              <property name="buddy">
+               <cstring>scrollArea_4</cstring>
+              </property>
              </widget>
             </item>
             <item>
@@ -2488,8 +2527,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>217</width>
-                 <height>122</height>
+                 <width>570</width>
+                 <height>276</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -2989,6 +3028,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>t3AmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                   <item row="2" column="0">
@@ -3002,6 +3044,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>t4AmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                   <item row="0" column="0">
@@ -3014,6 +3059,9 @@
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="buddy">
+                     <cstring>tshAmountSpinBox</cstring>
                     </property>
                    </widget>
                   </item>
@@ -3279,6 +3327,9 @@
               <property name="margin">
                <number>5</number>
               </property>
+              <property name="buddy">
+               <cstring>scrollArea_5</cstring>
+              </property>
              </widget>
             </item>
             <item>
@@ -3291,8 +3342,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>229</width>
-                 <height>160</height>
+                 <width>570</width>
+                 <height>276</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -3537,6 +3588,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>hco3AmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                   <item row="2" column="0">
@@ -3549,6 +3603,9 @@
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="buddy">
+                     <cstring>kAmountSpinBox</cstring>
                     </property>
                    </widget>
                   </item>
@@ -3582,6 +3639,9 @@
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="buddy">
+                     <cstring>naAmountSpinBox</cstring>
                     </property>
                    </widget>
                   </item>
@@ -4291,6 +4351,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>clAmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                  </layout>
@@ -4330,6 +4393,9 @@
               <property name="margin">
                <number>5</number>
               </property>
+              <property name="buddy">
+               <cstring>scrollArea_6</cstring>
+              </property>
              </widget>
             </item>
             <item>
@@ -4342,8 +4408,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>219</width>
-                 <height>160</height>
+                 <width>570</width>
+                 <height>276</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -4373,6 +4439,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>tcAmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                   <item row="3" column="1">
@@ -4395,6 +4464,9 @@
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="buddy">
+                     <cstring>ldlAmountSpinBox</cstring>
                     </property>
                    </widget>
                   </item>
@@ -4633,6 +4705,9 @@
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
+                    </property>
+                    <property name="buddy">
+                     <cstring>hdlAmountSpinBox</cstring>
                     </property>
                    </widget>
                   </item>
@@ -5332,6 +5407,9 @@
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
+                    <property name="buddy">
+                     <cstring>tgAmountSpinBox</cstring>
+                    </property>
                    </widget>
                   </item>
                   <item row="1" column="1">
@@ -5444,6 +5522,9 @@
            <widget class="QLabel" name="ageLabel">
             <property name="text">
              <string>Age: </string>
+            </property>
+            <property name="buddy">
+             <cstring>ageAmountSpinBox</cstring>
             </property>
            </widget>
           </item>
@@ -5630,6 +5711,60 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>tabWidgetTests</tabstop>
+  <tabstop>wbcUnitComboBox</tabstop>
+  <tabstop>pltAmountSpinBox</tabstop>
+  <tabstop>hgbAmountSpinBox</tabstop>
+  <tabstop>wbcAmountSpinBox</tabstop>
+  <tabstop>rbcAmountSpinBox</tabstop>
+  <tabstop>hctAmountSpinBox</tabstop>
+  <tabstop>rbcUnitComboBox</tabstop>
+  <tabstop>hctUnitComboBox</tabstop>
+  <tabstop>hgbUnitComboBox</tabstop>
+  <tabstop>pltUnitComboBox</tabstop>
+  <tabstop>scrollArea_2</tabstop>
+  <tabstop>bunAmountSpinBox</tabstop>
+  <tabstop>crUnitComboBox</tabstop>
+  <tabstop>bunUnitComboBox</tabstop>
+  <tabstop>crAmountSpinBox</tabstop>
+  <tabstop>scrollArea_3</tabstop>
+  <tabstop>tbilUnitComboBox</tabstop>
+  <tabstop>tbilAmountSpinBox</tabstop>
+  <tabstop>albUnitComboBox</tabstop>
+  <tabstop>albAmountSpinBox</tabstop>
+  <tabstop>scrollArea_4</tabstop>
+  <tabstop>t3AmountSpinBox</tabstop>
+  <tabstop>t3UnitComboBox</tabstop>
+  <tabstop>tshAmountSpinBox</tabstop>
+  <tabstop>tshUnitComboBox</tabstop>
+  <tabstop>t4AmountSpinBox</tabstop>
+  <tabstop>t4UnitComboBox</tabstop>
+  <tabstop>scrollArea_5</tabstop>
+  <tabstop>clUnitComboBox</tabstop>
+  <tabstop>kAmountSpinBox</tabstop>
+  <tabstop>naAmountSpinBox</tabstop>
+  <tabstop>naUnitComboBox</tabstop>
+  <tabstop>kUnitComboBox</tabstop>
+  <tabstop>clAmountSpinBox</tabstop>
+  <tabstop>hco3UnitComboBox</tabstop>
+  <tabstop>hco3AmountSpinBox</tabstop>
+  <tabstop>scrollArea_6</tabstop>
+  <tabstop>hdlAmountSpinBox</tabstop>
+  <tabstop>ldlAmountSpinBox</tabstop>
+  <tabstop>tgUnitComboBox</tabstop>
+  <tabstop>tcAmountSpinBox</tabstop>
+  <tabstop>ldlUnitComboBox</tabstop>
+  <tabstop>hdlUnitComboBox</tabstop>
+  <tabstop>tcUnitComboBox</tabstop>
+  <tabstop>tgAmountSpinBox</tabstop>
+  <tabstop>genderChoice</tabstop>
+  <tabstop>ageAmountSpinBox</tabstop>
+  <tabstop>ageTypeComboBox</tabstop>
+  <tabstop>closeBtn</tabstop>
+  <tabstop>checkResultBtn</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

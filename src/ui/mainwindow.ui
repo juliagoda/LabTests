@@ -1378,8 +1378,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>570</width>
-                 <height>276</height>
+                 <width>221</width>
+                 <height>84</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -1933,8 +1933,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>570</width>
-                 <height>276</height>
+                 <width>249</width>
+                 <height>84</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -2488,8 +2488,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>570</width>
-                 <height>276</height>
+                 <width>217</width>
+                 <height>122</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_10">
@@ -3291,8 +3291,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>570</width>
-                 <height>276</height>
+                 <width>229</width>
+                 <height>160</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -4342,8 +4342,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>570</width>
-                 <height>276</height>
+                 <width>219</width>
+                 <height>160</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -5554,7 +5554,7 @@
      <string>Abo&amp;ut</string>
     </property>
     <addaction name="actionLabtests"/>
-    <addaction name="actionAuthot"/>
+    <addaction name="actionAuthor"/>
     <addaction name="actionSources"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
@@ -5562,7 +5562,7 @@
      <string>He&amp;lp</string>
     </property>
     <addaction name="actionReport_issue"/>
-    <addaction name="actionPropose_an_idea"/>
+    <addaction name="actionPropose"/>
     <addaction name="actionFAQ"/>
    </widget>
    <widget class="QMenu" name="menuSettings">
@@ -5599,7 +5599,7 @@
     <string>&amp;Labtests</string>
    </property>
   </action>
-  <action name="actionAuthot">
+  <action name="actionAuthor">
    <property name="text">
     <string>&amp;Author</string>
    </property>
@@ -5619,7 +5619,7 @@
     <string>&amp;FAQ</string>
    </property>
   </action>
-  <action name="actionPropose_an_idea">
+  <action name="actionPropose">
    <property name="text">
     <string>&amp;Propose idea</string>
    </property>

@@ -17,8 +17,13 @@ You should have received a copy of the GNU Lesser General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
+# To run this: python -m unittest test_mainwindow_gui.py
+
 
 import sys
+
+sys.path.append("../ui")
+
 import unittest
 from mainwindow_ui import Ui_MainWindow
 from PyQt5.QtWidgets import QMainWindow, QApplication

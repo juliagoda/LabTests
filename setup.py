@@ -19,20 +19,12 @@ def get_data_files():
     """Return data_files in a platform dependent manner"""
     if sys.platform.startswith('linux'):
         if PY36:
-            data_files = [('/usr/share/labtests/src/sources', ['src/sources/bloodResults.yaml']),
-                  ('/usr/share/labtests/src/sources', ['src/sources/urineResults.yaml']),
-                  ('/usr/share/labtests/src/sources', ['src/sources/liverResults.yaml']),
-                  ('/usr/share/labtests/src/ui', ['src/ui/answer_ui.py']),
+            data_files = [('/usr/share/labtests/src/ui', ['src/ui/answer_ui.py']),
                   ('/usr/share/labtests/src/ui', ['src/ui/mainwindow_ui.py']),
                   ('/usr/share/labtests/src/ui', ['src/ui/mainwindow.ui']),
                   ('/usr/share/labtests/src/ui', ['src/ui/answer.ui']),
                   ('/usr/share/labtests/src', ['src/answer.py']),
-                  ('/usr/share/labtests/src', ['src/BaseOrgan.py']),
-                  ('/usr/share/labtests/src', ['src/bloodCheck.py']),
-                  ('/usr/share/labtests/src', ['src/urineCheck.py']),
-                  ('/usr/share/labtests/src', ['src/liverCheck.py']),
                   ('/usr/share/labtests/src', ['src/MainWindow.py']),
-                  ('/usr/share/labtests/src', ['src/Summary.py']),
                   ('/usr/share/applications', ['LabTests.desktop']),
                   ('/usr/share/labtests', ['Copyright.txt']),
                   ('/usr/bin', ['labtests']),]
@@ -45,10 +37,6 @@ def get_data_files():
 if not os.path.exists("/usr/share/labtests/src/ui"):
     os.makedirs("/usr/share/labtests/src/ui")
     
-if not os.path.exists("/usr/share/labtests/src/sources"):
-    os.makedirs("/usr/share/labtests/src/sources")
-
-
 
 setup(name='LabTests',
       version='1.0',

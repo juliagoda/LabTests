@@ -17,7 +17,7 @@ You should have received a copy of the GNU Lesser General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
-# To run this: python -m unittest test_mainwindow_gui.py
+# To run this: python -m unittest test_answer_gui.py
 
 
 import sys
@@ -35,13 +35,13 @@ app = QApplication(sys.argv) # without it we cannot test anything
 
 class AnswerWidgetTest(unittest.TestCase):
     
-    answerWidget = None  # hold QMainWindow in variable  
+    answerWidget = None  # hold QWidget in variable  
     ui = None   # hold GUI in variable
     
     def setUp(self):
         self.answerWidget = QWidget() # create empty QWidget
         self.ui = Ui_Answer() # we want to test GUI - only
-        self.ui.setupUi(self.answerWidget) # set GUI for freshly created QMainWindow
+        self.ui.setupUi(self.answerWidget) # set GUI for freshly created QWidget
 
 
     def test_textEditsWidgetsText(self):

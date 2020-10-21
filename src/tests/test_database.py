@@ -30,7 +30,7 @@ class TestDB(unittest.TestCase):
     
     @classmethod
     def setUpClass(cls):
-        cls.__engine = sqlalchemy.create_engine("SOME_ADDRESS", pool_recycle=280) # of course it's not real yet
+        cls.__engine = sqlalchemy.create_engine("mysql://juliagod_readuser:labtests-heliohost@johnny.heliohost.org:3306/juliagod_labtests", pool_recycle=280) # of course it's not real yet
         cls.__connection = cls.__engine.connect()
 
 

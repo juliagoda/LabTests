@@ -49,8 +49,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def saveResultsToDict(self, tabGuiChoices, gender, age, typeAge, dictType):
         """How to transfer data from the main window to global class variables, which are here dictionaries
         
-        @type tabGuiChoices: {}
-        @param tabGuiChoices: nested dictionary with tab's choices. For example {'WBC': {wbcUnitComboBox.currentText(): wbcAmountSpinBox.value(), pltUnitComboBox.currentText(): pltAmountSpinBox.value()}}
+        @type tabGuiChoices: {:[(,,)]}
+        @param tabGuiChoices: dictionary with list of tuples with three elements of tab's choices. For example {'Complete Blood Count': [(wbcLabel.text(), wbcUnitComboBox.currentText(), wbcAmountSpinBox.value()), (pltLabel.text(), pltUnitComboBox.currentText(), pltAmountSpinBox.value())]}
         
         @type gender: string
         @param gender: choose between 'male' and 'female'
@@ -69,9 +69,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         """
         
         for tested_aim, desc in tabGuiChoices.items():
-            targetfullname = self.__connection.execute("SELECT `targetfullname` FROM `targetdesc` WHERE `targetshortname` = {tested_aim}").first()
-            for curr_unit in desc:
-                statement = self.__connection.execute(getDataQueryText(targetfullname, curr_unit, typeAge, age, desc[curr_unit], gender)).first() 
+            for (shortname, resultAmount, unitname) in desc:
+                targetfullname = self.__connection.execute("SELECT `targetfullname` FROM `targetdesc` WHERE `targetshortname` = {shortname}").first()
+                statement = self.__connection.execute(getDataQueryText(targetfullname, unitname, typeAge, age, resultAmount, gender)).first() 
                 if statement is not None:
                     dictType[tested_aim]['fullname'] = statement['targetfullname']
                     dictType[tested_aim]['down-trend-sympt'] = statement['down-trend-sympt']

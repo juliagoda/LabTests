@@ -18,6 +18,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '''
 
 import sys
+import re
 import sqlalchemy
 from ui.mainwindow_ui import Ui_MainWindow
 from PyQt5.QtWidgets import QMainWindow, QApplication
@@ -26,6 +27,7 @@ from PyQt5.QtWidgets import QMainWindow, QApplication
 class MainWindow(QMainWindow, Ui_MainWindow):
     
     __connection = None
+    __engine = None
     
     _bloodDict = {}
     _renalDict = {}
@@ -41,10 +43,20 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.closeBtn.clicked.connect(self.closeApp)
        # self.checkResultBtn.clicked.connect(lambda: self.checkResult()) # because it expects a callable function
        
+    def getEngine(self):
+        return self.__engine
+    
+    def getConnection(self):
+        return self.__connection
+    
+    def getBloodDict(self):
+        return self._bloodDict
+       
     def connectDatabase(self):
         """Initiates connection to the database
         """
-        self.__connection = sqlalchemy.create_engine("mysql://juliagod_readuser:labtests-heliohost@johnny.heliohost.org:3306/juliagod_labtests", pool_recycle=280).connect()
+        self.__engine = sqlalchemy.create_engine("mysql://juliagod_readuser:labtests-heliohost@johnny.heliohost.org:3306/juliagod_labtests", pool_recycle=280)
+        self.__connection = self.__engine.connect()
         
     def saveResultsToDict(self, tabGuiChoices, gender, age, typeAge, dictType):
         """How to transfer data from the main window to global class variables, which are here dictionaries
@@ -70,12 +82,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         for tested_aim, desc in tabGuiChoices.items():
             for (shortname, resultAmount, unitname) in desc:
-                targetfullname = self.__connection.execute("SELECT `targetfullname` FROM `targetdesc` WHERE `targetshortname` = {shortname}").first()
-                statement = self.__connection.execute(getDataQueryText(targetfullname, unitname, typeAge, age, resultAmount, gender)).first() 
+                targetfullname = self.__connection.execute("SELECT `targetfullname` FROM `targetdesc` WHERE `targetshortname` = '{0}'".format(shortname)).fetchone()
+                statement = self.__connection.execute(self.getDataQueryText(targetfullname['targetfullname'], unitname, typeAge, age, resultAmount, gender)).fetchone() 
                 if statement is not None:
-                    dictType[tested_aim]['fullname'] = statement['targetfullname']
-                    dictType[tested_aim]['down-trend-sympt'] = statement['down-trend-sympt']
-                    dictType[tested_aim]['up-trend-sympt'] = statement['up-trend-sympt']
+                    dictType[shortname] = {}
+                    dictType[shortname]['fullname'] = statement['targetfullname']
+                    dictType[shortname]['down-trend-sympt'] = statement['down-trend-sympt']
+                    dictType[shortname]['up-trend-sympt'] = statement['up-trend-sympt']
                                                           
         return (len(dictType) > 0)
         
@@ -104,7 +117,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         @return: content of the query
         """
         
-        return ("SELECT * FROM `targetdesc` WHERE EXISTS (SELECT 1 FROM `labtests` WHERE `targetdesc`.`targetfullname` = `labtests`.`targetfullname` AND `labtests`.`targetfullname` = {targetfullname} AND `labtests`.`unit` = {unit} AND `labtests`.`age-type` = {typeAge} AND {age} >= `labtests`.`age-range-start` AND {age} <= `labtests`.`age-range-end` AND {testsLevel} >= `labtests`.`normal-range-start` AND {testsLevel} <= `labtests`.`normal-range-end` AND ( `labtests`.`gender` = {gender} XOR `labtests`.`gender` = 'both'))")
+        return ("SELECT * FROM `targetdesc` WHERE EXISTS (SELECT 1 FROM `labtests` WHERE `targetdesc`.`targetfullname` = `labtests`.`targetfullname` AND `labtests`.`targetfullname` = '{0}' AND `labtests`.`unit` = '{1}' AND `labtests`.`age-type` = '{2}' AND {3} >= `labtests`.`age-range-start` AND {4} <= `labtests`.`age-range-end` AND {5} >= `labtests`.`normal-range-start` AND {6} <= `labtests`.`normal-range-end` AND ( `labtests`.`gender` = '{7}' XOR `labtests`.`gender` = 'both'))".format(targetfullname, unit, typeAge, age, age, testsLevel, testsLevel, gender))
         
     def closeDatabase(self):
         if not self.__connection.closed:

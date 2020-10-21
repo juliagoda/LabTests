@@ -104,7 +104,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         @return: content of the query
         """
         
-        return ("SELECT * FROM `targetdesc` WHERE EXISTS (SELECT 1 FROM `labtests` WHERE `targetdesc`.`targetfullname` = `labtests`.`targetfullname` AND `labtests`.`targetfullname` = {targetfullname} `labtests`.`unit` = {unit} AND `labtests`.`age-type` = {typeAge} AND {age} >= `labtests`.`age-range-start` AND {age} <= `labtests`.`age-range-end` AND {testsLevel} >= `labtests`.`normal-range-start` AND {testsLevel} <= `labtests`.`normal-range-end` AND ( `labtests`.`gender` = {gender} XOR `labtests`.`gender` = 'both'))")
+        return ("SELECT * FROM `targetdesc` WHERE EXISTS (SELECT 1 FROM `labtests` WHERE `targetdesc`.`targetfullname` = `labtests`.`targetfullname` AND `labtests`.`targetfullname` = {targetfullname} AND `labtests`.`unit` = {unit} AND `labtests`.`age-type` = {typeAge} AND {age} >= `labtests`.`age-range-start` AND {age} <= `labtests`.`age-range-end` AND {testsLevel} >= `labtests`.`normal-range-start` AND {testsLevel} <= `labtests`.`normal-range-end` AND ( `labtests`.`gender` = {gender} XOR `labtests`.`gender` = 'both'))")
         
     def closeDatabase(self):
         if not self.__connection.closed:

@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import sys
 import re
 import sqlalchemy
+import Calculator
 from ui.mainwindow_ui import Ui_MainWindow
 from PyQt5.QtWidgets import QMainWindow, QApplication
 

@@ -25,6 +25,7 @@ def get_data_files():
                   ('/usr/share/labtests/src/ui', ['src/ui/answer.ui']),
                   ('/usr/share/labtests/src', ['src/answer.py']),
                   ('/usr/share/labtests/src', ['src/MainWindow.py']),
+                  ('/usr/share/labtests/src', ['src/Calculator.py']),
                   ('/usr/share/applications', ['LabTests.desktop']),
                   ('/usr/share/labtests', ['Copyright.txt']),
                   ('/usr/bin', ['labtests']),]

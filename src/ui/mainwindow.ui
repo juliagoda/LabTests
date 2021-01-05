@@ -305,6 +305,11 @@
                       <string>%</string>
                      </property>
                     </item>
+                    <item>
+                     <property name="text">
+                      <string>L/L</string>
+                     </property>
+                    </item>
                    </widget>
                   </item>
                   <item row="2" column="2">
@@ -491,11 +496,6 @@
                     </item>
                     <item>
                      <property name="text">
-                      <string>mg/24hr</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
                       <string>µmol/L</string>
                      </property>
                     </item>
@@ -603,22 +603,12 @@
                     </property>
                     <item>
                      <property name="text">
-                      <string>µmol/L</string>
+                      <string>mmol/L</string>
                      </property>
                     </item>
                     <item>
                      <property name="text">
-                      <string>mol/L</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>mg/L</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>µM</string>
+                      <string>mg/dL</string>
                      </property>
                     </item>
                    </widget>
@@ -828,11 +818,6 @@
                     <item>
                      <property name="text">
                       <string>mU/L</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>U/mL</string>
                      </property>
                     </item>
                    </widget>
@@ -1146,11 +1131,6 @@
                     <item>
                      <property name="text">
                       <string>mEq/L</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>mmHg</string>
                      </property>
                     </item>
                     <item>
